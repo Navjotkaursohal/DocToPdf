@@ -1,0 +1,157 @@
+<div class="wrapper">
+    <nav id="sidebar">
+        <ul id="sidebar_menu" class="sidebar_content">
+
+
+            <li>
+                <a routerLink="/dashboard" [ngClass]="{'active': authService.TitleName === 'Overview'}"
+                    class="has-arrow" data-toggle="collapse" href="#ui-dashboard" aria-expanded="false"
+                    aria-controls="ui-basic">
+                    <i class='fas fa-home icon_alert'></i>
+                    <span>Dashboard</span>
+                </a>
+                <hr>
+            </li>
+
+            <li>
+                <a routerLink="/DoctoPdf" [ngClass]="{'active': authService.TitleName === 'Doc to Pdf'}"
+                    class="has-arrow" data-toggle="collapse" href="#ui-DoctoPdf" aria-expanded="false"
+                    aria-controls="ui-basic">
+                    <i class='fas fa-home icon_alert'></i>
+                    <span>Doc to Pdf</span>
+                </a>
+                <hr>
+            </li>
+
+            <li>
+                <a routerLink="/PdftoDoc" [ngClass]="{'active': authService.TitleName === 'Pdf to Doc'}"
+                    class="has-arrow" data-toggle="collapse" href="#ui-PdftoDoc" aria-expanded="false"
+                    aria-controls="ui-basic">
+                    <i class='fas fa-home icon_alert'></i>
+                    <span>Pdf to Doc</span>
+                </a>
+                <hr>
+            </li>
+           
+
+
+
+            <!-- <li>
+                <a class="has-arrow" data-toggle="collapse" href="#ui-Screensavers" aria-expanded="false"
+                    aria-controls="ui-basic">
+
+                    <i class='fas fa-laptop icon_screensaver'></i>
+                    <span class="screensaver_space">{{'Sidebar.screensaver' | translate}}</span>
+                </a>
+                <div class="collapse" id="ui-Screensavers">
+                    <ul class="nav_content">
+                        <li><a routerLink="/screensaver/add" routerLinkActive="active"><i
+                                    class='fas fa-caret-right image'></i>{{'Sidebar.createScreensaver' | translate}}</a>
+                        </li>
+                        <li><a routerLink="/screensaver" [ngClass]="{'active': authService.TitleName === 'Screensavers List'}"><i
+                                    class='fas fa-caret-right image_synchronization'></i>
+                                {{'Sidebar.screensaverList' | translate}}</a></li>
+                        <li><a routerLink="/screensaver/draft" routerLinkActive="active"><i
+                                    class='fas fa-caret-right image_screensaver_draft'></i>{{'Sidebar.screensaverDraft'
+                                | translate}}</a></li>
+                    </ul>
+                </div>
+            </li> -->
+
+            <!-- <li>
+                <a class="has-arrow" data-toggle="collapse" href="#ui-Valerts" aria-expanded="false"
+                    aria-controls="ui-basic">
+                    <i class='fas fa-video icon_screensaver'></i>
+                    <span class="video_space">{{'Sidebar.videoAlerts' | translate}}</span>
+                </a>
+                <div class="collapse" id="ui-Valerts">
+                    <ul class="nav_content">
+                        <li><a routerLink="/video-alerts" [ngClass]="{'active': authService.TitleName === 'Create Video Alert'}"><i
+                                    class='fas fa-caret-right image'></i>{{'Sidebar.createVideoAlerts' | translate}}</a>
+                        </li>
+                        <li><a routerLink="/video-alerts/list" routerLinkActive="active"><i
+                                    class='fas fa-caret-right image'></i>{{'Sidebar.videoList' |
+                                translate}}</a></li>
+                    </ul>
+                </div>
+            </li> -->
+
+            <!-- <li>
+                <a class="has-arrow" data-toggle="collapse" href="#ui-Wallpaper" aria-expanded="false"
+                    aria-controls="ui-basic">
+                    <i class='fas fa-photo-video icon_screensaver'></i>
+                    <span class="wallpaper_space">{{'Sidebar.wallpaper' | translate}}</span>
+                </a>
+                <div class="collapse" id="ui-Wallpaper">
+                    <ul class="nav_content">
+                        <li><a routerLink="/wallpaper/add" routerLinkActive="active"><i
+                                    class='fas fa-caret-right image_wallpaper'></i>
+                                {{'Sidebar.createWallpaper' | translate}}</a></li>
+                        <li><a routerLink="/wallpaper" [ngClass]="{'active': authService.TitleName === 'Wallpapers List'}"><i
+                                    class='fas fa-caret-right image'></i>{{'Sidebar.wallpaperList' | translate}}</a>
+                        </li>
+                        <li><a routerLink="/wallpaper/draft" routerLinkActive="active"><i
+                                    class='fas fa-caret-right image'></i>{{'Sidebar.wallpaperDraft' | translate}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a class="has-arrow" data-toggle="collapse" href="#ui-LockScreen" aria-expanded="false"
+                    aria-controls="ui-basic">
+                    <i class='fas fa-laptop icon_screensaver'></i>
+                    <span class="lockscreen_space">{{'Sidebar.lockscreen' | translate}}</span>
+                </a>
+                <div class="collapse" id="ui-LockScreen">
+                    <ul class="nav_content">
+                        <li><a routerLink="/lockscreen/add" routerLinkActive="active"><i
+                                    class='fas fa-caret-right image'></i>
+                                {{'Sidebar.createLockscreen' | translate}}</a></li>
+                        <li><a routerLink="/lockscreen" [ngClass]="{'active': authService.TitleName === 'Lockscreens List'}"><i
+                                    class='fas fa-caret-right image'></i>
+                                {{'Sidebar.lockscreenList' | translate}}</a></li>
+                        <li><a routerLink="/lockscreen/draft" routerLinkActive="active"><i
+                                    class='fas fa-caret-right image'></i>
+                                {{'Sidebar.draftLockscreen' | translate}}</a></li>
+                    </ul>
+                </div>
+            </li> -->
+            <!-- <li>
+                <a class="has-arrow" data-toggle="collapse" href="#ui-opt" aria-expanded="false"
+                    aria-controls="ui-basic">
+
+                    <i class='far fa-file-alt icon_screensaver'></i>
+                    <span class="opt_space">{{'Sidebar.subscription' | translate}}</span>
+                </a>
+                <div class="collapse" id="ui-opt">
+                    <ul class="nav_content">
+                        <li><a routerLink="/opt-list" routerLinkActive="active"><i
+                                    class='fas fa-caret-right image'></i>{{'Sidebar.subscriptionList' | translate}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </li> -->
+            <!-- <li>
+                <a class="has-arrow" data-toggle="collapse" href="#ui-Skin" aria-expanded="false"
+                    aria-controls="ui-basic">
+                    <i class="fa fa-edit icon_skin"></i>
+                    <span class="skin_space"> {{'Sidebar.skinEditor' | translate}}</span>
+                </a>
+                <div class="collapse" id="ui-Skin">
+                    <ul class="nav_content">
+                        <li><a routerLink="/skin-list/add" routerLinkActive="active"><i
+                                    class='fas fa-caret-right image'></i>
+                                {{'Sidebar.createSkin' | translate}}</a></li>
+                        <li><a routerLink="/skin-list" [ngClass]="{'active': authService.TitleName === 'Skin List'}"><i
+                                    class='fas fa-caret-right image'></i>
+                                {{'Sidebar.skinList' |
+                                translate}}</a></li>
+                    </ul>
+                </div>
+            </li> -->
+
+
+
+        </ul>
+    </nav>
+</div>
